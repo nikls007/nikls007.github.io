@@ -1,0 +1,595 @@
+/* colors */
+body,
+div {
+  margin: 0;
+  padding: 0;
+}
+/* font family */
+@font-face {
+  font-family: 'Proxima Nova Lt';
+  src: url('../font/ProximaNova-LightIt.woff2') format('woff2'), url('../font/ProximaNova-LightIt.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'ProximaNova_ reg';
+  src: url('../font/ProximaNovaCond-Regular.woff2') format('woff2'), url('../font/ProximaNovaCond-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ProximaNova_bold';
+  src: url('../font/ProximaNovaExCn-Bold.woff2') format('woff2'), url('../font/ProximaNovaExCn-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova Cn Bl';
+  src: url('../font/ProximaNovaCond-Black.woff2') format('woff2'), url('../font/ProximaNovaCond-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova ExCn Lt';
+  src: url('../font/ProximaNovaExCn-LightIt.woff2') format('woff2'), url('../font/ProximaNovaExCn-LightIt.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Proxima Nova Cn Rg';
+  src: url('../font/ProximaNovaCond-Bold.woff2') format('woff2'), url('../font/ProximaNovaCond-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova Th';
+  src: url('../font/ProximaNova-Extrabld.woff2') format('woff2'), url('../font/ProximaNova-Extrabld.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova Rg';
+  src: url('../font/ProximaNova-Bold.woff2') format('woff2'), url('../font/ProximaNova-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova Cn Lt';
+  src: url('../font/ProximaNovaCond-LightIt.woff2') format('woff2'), url('../font/ProximaNovaCond-LightIt.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Proxima Nova Cn Rg';
+  src: url('../font/ProximaNovaCond-RegularIt.woff2') format('woff2'), url('../font/ProximaNovaCond-RegularIt.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+/* basic setting */
+html {
+  font-size: 10px;
+}
+body {
+  font-family: 'ProximaNova_ reg', sans-serif;
+}
+.button {
+  color: #ffffff;
+  padding: 1rem 3rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  background-color: #ffb600;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: #cc9200;
+}
+/* typografica */
+section {
+  padding: 10rem 0;
+}
+.section-header {
+  margin: 2rem 0 10rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+  font-size: 4rem;
+  text-align: center;
+}
+/* main */
+.main {
+  background: #ffffff url(../img/0000.png) center center no-repeat;
+  background-size: 100% 100%;
+  padding: 3rem 0;
+}
+.main-content {
+  margin-top: 10rem;
+}
+.main-content h1 {
+  margin-bottom: 4rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+.main-subtitle {
+  margin-bottom: 5rem;
+  font-size: 2.4rem;
+}
+span {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 2rem 3rem;
+  font-size: 1.8rem;
+  color: #ffffff;
+  text-align: center;
+  background-color: green;
+}
+.header {
+  height: 7rem;
+}
+.wrap {
+  display: table;
+  width: 100%;
+  height: 7rem;
+}
+.wrap-blok {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+}
+.phon-link {
+  display: inline-block;
+  font-family: 'ProximaNova_bold', sans-serif;
+  color: #242424;
+  font-weight: 900;
+  height: 7rem;
+  line-height: 7rem;
+}
+/* форма */
+.main-form {
+  margin-top: 4rem;
+  background-color: #ffffff;
+}
+.main-form h2 {
+  text-align: center;
+  font-family: ProximaNova;
+  font-size: 18px;
+  font-weight: 400;
+  color: #292929;
+}
+.main-form,
+small {
+  text-align: center;
+  font-family: ProximaNova;
+  font-size: 16px;
+}
+.main-form input {
+  display: block;
+  width: 100%;
+  border: 1px solid blue;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+/* оформление блока с преимуществами */
+.features-blok {
+  text-align: center;
+}
+.features-img img {
+  display: block;
+  margin: 0 auto;
+}
+/* омодельное окно */
+.popup {
+  position: fixed;
+  left: 50%;
+  top: 30%;
+  background-color: #ffffff;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 4rem 6rem;
+}
+.popup-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.popup-content {
+  text-align: center;
+}
+.popup-main-form {
+  text-align: center;
+}
+@media (max-width: 991px) {
+  .phon-blok {
+    text-align: center;
+  }
+}
+.schema h1 {
+  font-weight: bold;
+  font-family: ProximaNova;
+}
+.schema img {
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.schema h2,
+p {
+  font-family: ProximaNova;
+}
+.schema h1 {
+  margin-top: -100px;
+}
+.schema h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+.schema p {
+  font-size: 20px;
+}
+.schema text {
+  margin-top: 20px;
+}
+.schema2 h1 {
+  margin-top: -50px;
+  font-family: ProximaNova;
+}
+.schema2 {
+  background-color: #F5F5F5;
+}
+.schema2 p {
+  margin-top: 115px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.schema2 img {
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.schema3 h1 {
+  margin-top: -100px;
+  font-family: ProximaNova;
+}
+.schema3 h3 {
+  margin-top: 40px;
+  font-weight: bold;
+  font-family: ProximaNova;
+  text-decoration: underline;
+}
+.schema3 p {
+  margin-top: 40px;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: ProximaNova;
+}
+.top-buffer {
+  margin-top: 50px;
+}
+.schema4 h1 {
+  font-family: ProximaNova;
+  font-size: 40px;
+  line-height: 58px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #292929;
+  margin-top: 120px;
+}
+.schema4 {
+  font-family: ProximaNova;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #292929;
+  background: #ffffff url(../img/fff.png) center center no-repeat;
+  background-size: 100% 100%;
+  height: 700px;
+}
+
+
+.popup{
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    padding: 4rem 6rem;
+    background-color: #ffff;
+   
+    &-content{
+        text-align: center;
+    }
+}
+.popup-form input{
+    text-align: center;
+}
+.popup-content h4,p{
+    text-align: center;
+}
+.popup-close{
+     margin-right: -50px;
+     right: 2rem;
+        width: 2rem;
+        font-size: 4rem;
+        position: absolute;
+        background-color: #fff;
+        
+}
+
+.box-materials{
+   background: #ffffff url(../img/fonMat.png) center center no-repeat;
+  background-size: 100% 100%;
+  
+}
+.box-services{
+  background-color: #286B0A;
+}
+.box-materials h1{
+  text-align: center;
+  font-size: 36px;
+font-weight: bold;
+padding-top: 120px;
+
+}
+.box-materials p{
+   text-align: center;
+  font-size: 19px;
+font-weight: bold;
+}
+.box-materials img{
+  margin-top:68px;
+}
+.box-materials h2{
+  text-align: center;
+  font-size: 22px;
+font-weight: bold;
+}
+.box-mmaterials h4{
+  text-align: center;
+margin-top:100px;
+font-size: 16px;
+font-weight: bold;
+}
+.box-materials h3{
+  text-align: center;
+  margin-top:78px;
+}
+.box-materials a{
+  font-size: 20px;
+  margin-left: 30%;
+  color: #286B0A;
+}
+.margin-25{
+  height: 17px;
+}
+
+
+
+.box-services h1{
+  text-align: center;
+  font-size: 36px;
+font-weight: 700;
+color: #fcfcfc;
+padding-top: 120px;
+}
+.box-services p{
+  font-size: 19px;
+font-weight: 400;
+color: #fcfcfc;
+margin-top:50px;
+}
+.box-services img{
+  margin-top:50px;
+   max-width: 100%;
+    height: auto;
+}
+.box-services h2{
+  text-align: center;
+  font-size: 20px;
+font-weight: 700;
+line-height: 18px;
+color: #fff;
+}
+.box-services button{
+  text-align: center;
+  margin-top:27px;
+  width: 146px;
+height: 52px;
+background-color: #F9B001;
+font-size: 16px;
+font-weight: 700;
+position: relative;
+left: 50%;
+transform: translate(-50%, 0); 
+margin-bottom:100px;
+}
+.box-price{
+  background-color: #006400;
+ min-height: 100%;
+   
+  }
+
+.box-price h1{
+  text-align: center;
+  font-size: 36px;
+font-weight: 700;
+color: #fff;
+}
+.box-price p{
+  font-size: 18px;
+font-weight: 400;
+color: #fff;
+}
+.box-price h2{
+text-align: center;
+font-size: 19px;
+font-weight: 700;
+}
+
+.box{
+  background-color: #fff;
+  margin-top: 10px;
+  height: 60rem;
+margin-bottom: 30px;
+  }
+.box h2,h3,ul{
+  text-align: center;
+}
+.box img{
+    display:block;
+     margin:auto;
+     margin-top: 40px;
+      max-width: 100%;
+    height: auto;
+}
+.box li{
+  font-size: 18px;
+font-weight: 400;
+
+}
+.box button{
+  text-align: center;
+  
+  width: 146px;
+height: 52px;
+background-color: #F9B001;
+font-size: 16px;
+font-weight: 700;
+position: relative;
+left: 50%;
+transform: translate(-50%, 0); 
+margin-bottom:100px;
+}
+.box h3{
+  margin-top: 40px;
+}
+.box ul{
+  
+  min-height: 15rem;
+}
+.box h2{
+  padding-top: 40px;
+}
+
+.box-price h1{
+  padding-top: 25px;
+
+}
+.box-price p{
+  margin-top:30px;
+}
+.box-price h4{
+  padding-top:120px;
+
+}
+.box-price button{
+  width: 300px;
+height: 52px;
+background-color: #F9B001;
+}
+.contact{
+  height: 80rem;
+   background: #ffffff url(../img/fonContact.png) center center no-repeat;
+  background-size: 100% 100%;
+   max-width: 100%;
+    height: auto;
+  
+}
+.map{
+  margin-top:15px;
+  width: 621px;
+height: 250px;
+ max-width: 100%;
+    height: auto;
+
+}
+.contact h1{
+  
+  color: #292929;
+  font-family: "Proxima Nova";
+  font-size: 36px;
+  font-weight: 700;
+   line-height: 58px;
+   
+}
+
+.contact p{
+  margin-top:30px;
+  font-family: "Proxima Nova";
+  font-size: 18px;
+  font-weight: 400;
+ text-align: left;
+}
+.contact-form{
+  background-color: #fff;
+  width: 355px;
+  margin-left:25%;
+   max-width: 100%;
+    height: auto;
+  
+}
+.contact h2{
+  font-family: "Proxima Nova";
+font-size: 18px;
+font-weight: 400;
+
+}
+.contact-form h2{
+  padding-top:35px;
+  text-align: center;
+}
+.contact-form input{
+  text-align: center;
+  width: 255px;
+  height: 55px;
+  margin-top:25px;
+  margin-left:15%;
+  font-size: 13px;
+  font-weight: bold;
+}
+.contact textarea{
+
+  display:block;
+ width: 255px;
+height:100px;
+margin: auto;
+}
+.margin-15{
+  height: 25px;
+}
+.contact-form button{
+  width: 255px;
+   height: 63px;
+   margin: auto;
+   font-size: 20px;
+
+
+}
+
+
+.footer h1,p{
+  text-align: center;
+}
+.footer p{
+  font-size: 17px;
+}
+
+
+.footer img{
+  padding-top: 50px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
